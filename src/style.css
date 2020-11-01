@@ -232,7 +232,8 @@ nav a:hover {
 }
 
 .gallery {
-  padding-top: 0;
+  padding-top: 30px;
+  padding-left: 30px;
   height: 100vh;
 
   color: white;
@@ -240,6 +241,21 @@ nav a:hover {
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
+}
+.popis-kavarny {
+  text-align: center;
+  width: 40%;
+  padding: 20px;
+  border: 2px solid gray;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)
+  );
+}
+
+.popis-kavarny p {
+  font-size: 1.2rem;
 }
 
 .contacts {
