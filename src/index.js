@@ -4,7 +4,17 @@ import './style.css';
 console.log('funguju!');
 
 const navigace = document.getElementById('nav-btn');
+const navMenu = document.querySelector('nav');
+
 navigace.addEventListener('click', () => {
-  document.querySelector('nav').classList.toggle('nav-closed');
+  navMenu.classList.toggle('nav-closed');
 });
-console.log('jedu!');
+console.log('navigace se otevírá/zavírá!');
+
+const zabalujuMenu = document.querySelectorAll('.nav-polozky');
+zabalujuMenu.forEach((polozka) => {
+  polozka.addEventListener('click', () => {
+    navMenu.classList.add('nav-closed');
+  });
+});
+console.log('menu se zavírá!');

@@ -49,7 +49,9 @@ header {
   padding: 1rem 0 1rem 0;
   height: 5rem;
   background-color: #301a1a;
-  position: fixed; /*DOŘEŠIT */
+  position: fixed;
+  left: 0;
+  right: 0;
 }
 
 .topbar {
@@ -272,6 +274,7 @@ nav a:hover {
   height: auto;
 }
 
+/*-------------- ŠIROKÁ OBRAZOVKA ----------------*/
 @media screen and (min-width: 768px) {
   .container {
     max-width: 960px;
@@ -302,6 +305,10 @@ nav a:hover {
     display: block;
   }
 
+  .nav-btn {
+    display: none;
+  }
+
   .intro {
     width: 30%;
 
@@ -309,12 +316,5 @@ nav a:hover {
     padding-top: 4rem;
 
     text-align: center;
-  }
-}
-
-/*-------------- ŠIROKÁ OBRAZOVKA ----------------*/
-@media screen and (min-width: 500px) {
-  .nav-btn {
-    display: none;
   }
 }
