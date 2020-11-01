@@ -296,3 +296,10 @@ nav a:hover {
     text-align: center;
   }
 }
+
+/*-------------- ŠIROKÁ OBRAZOVKA ----------------*/
+@media screen and (min-width: 500px) {
+  .nav-btn {
+    display: none;
+  }
+}
