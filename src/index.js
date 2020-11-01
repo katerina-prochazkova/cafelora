@@ -1,5 +1,7 @@
 import './index.html';
 import './style.css';
+import { Layer } from './Layer/index.js';
+import { Drink } from './Drink/index.js';
 
 console.log('funguju!');
 
@@ -32,13 +34,27 @@ orderBtn.addEventListener('click', () => {
   }
   napoj.classList.toggle('drink__cup--selected');
 });
-
 console.log('nápoj se objednává!');
 
-// const zrusit = document.querySelector('.order-btn');
-// zrusit.addEventListener('click', () => {
-//   if (napoj.classList.contains('drink__cup--selected')) {
-//     napoj.classList.remove('drink__cup--selected');
-//     zrusit.textContent = 'Objednat';
-//   }
-// });
+const drinkInfoElm = document.querySelector('.drink__info');
+
+const layers = [
+  {
+    color: '#feeeca',
+    label: 'mléčná pěna',
+  },
+  {
+    color: '#fed7b0',
+    label: 'teplé mléko',
+  },
+  {
+    color: '#613916',
+    label: 'espresso',
+  },
+];
+
+layers.forEach((vrstva) => {
+  drinkInfoElm.innerHTML += Layer(vrstva);
+});
+
+console.log('nápoj se skládá po vrstvách!');
